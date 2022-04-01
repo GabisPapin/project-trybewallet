@@ -7,10 +7,10 @@ const INITIAL_STATE = {
 function wallet(state = INITIAL_STATE, action) {
   switch (action.type) {
   case 'NEW_ACTION':
-    return { wallet: {
+    return {
       currencies: [action.state],
       expenses: [action.state],
-    } };
+    };
   default:
     return state;
   }
