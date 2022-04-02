@@ -4,17 +4,19 @@ import PropTypes from 'prop-types';
 
 import Header from '../Componente/Header';
 import { fecthAPI } from '../actions';
+import ExpensesForm from '../Componente/ExpensesForm';
 
 class Wallet extends React.Component {
   componentDidMount() {
-    const { dispatch } = this.props;
-    dispatch(fecthAPI());
+    const { currencies } = this.props;
+    currencies();
   }
 
   render() {
     return (
       <div>
         <Header />
+        <ExpensesForm />
       </div>
     );
   }
@@ -24,8 +26,8 @@ Wallet.propTypes = {
   currencies: PropTypes.array,
 }.isRequired;
 
-// const mapDispatchToProps = (dispatch) => ({
-//   currencies: dispatch(fecthAPI()),
-// });
+const mapDispatchToProps = (dispatch) => ({
+  currencies: () => dispatch(fecthAPI()),
+});
 
-export default connect(null)(Wallet);
+export default connect(null, mapDispatchToProps)(Wallet);
