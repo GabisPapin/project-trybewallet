@@ -5,7 +5,10 @@ import PropTypes from 'prop-types';
 
 class Header extends React.Component {
   render() {
-    const { email } = this.props;
+    const { email, expenses } = this.props;
+    const conversion = expenses.length === 0 ? 0 : expenses.map(
+      (object) => object.exchangeRates[object.currency].ask * object.value,
+    ).reduce((prev, acc) => Number(prev) + Number(acc), 0).toFixed(2);
     return (
       <div>
         <header>
@@ -15,7 +18,12 @@ class Header extends React.Component {
           </label>
           <div>
             Despesa total:
-            <p name="despesa-total" data-testid="total-field">0</p>
+            <p
+              data-testid="total-field"
+              name="despesa-total"
+            >
+              {conversion}
+            </p>
           </div>
           <div>
             <p data-testid="header-currency-field">BRL</p>
@@ -28,10 +36,12 @@ class Header extends React.Component {
 
 Header.propTypes = {
   email: PropTypes.string,
+  expenses: PropTypes.object,
 }.isRequired;
 
 const mapStateToProps = (state) => ({
   email: state.user.email,
+  expenses: state.wallet.expenses,
 });
 
 export default connect(mapStateToProps, null)(Header);

@@ -1,9 +1,11 @@
 export const NEW_ACTION = 'NEW_ACTION';
-export const REQUEST_API = 'REQUEST_API';
+export const NEW_EXPENSES = 'NEW_EXPENSES';
 export const GET_CURRENCIES = 'GET_CURRENCIES';
 
 // Coloque aqui suas actions
 export const action = (state) => ({ type: NEW_ACTION, state });
+
+export const actionExpense = (state) => ({ type: NEW_EXPENSES, state });
 
 export const getCurrencies = (state) => ({ type: GET_CURRENCIES, state });
 
