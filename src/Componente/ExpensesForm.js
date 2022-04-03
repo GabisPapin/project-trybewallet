@@ -4,14 +4,16 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { actionExpense } from '../actions';
 
+const Alimentacao = 'Alimentação';
+
 class ExpensesForm extends React.Component {
   constructor() {
     super();
     this.state = {
       value: '',
-      currency: '',
-      method: '',
-      tag: '',
+      currency: 'USD',
+      method: 'Dinheiro',
+      tag: Alimentacao,
       description: '',
     };
   }
@@ -40,9 +42,9 @@ class ExpensesForm extends React.Component {
     expense(obj);
     this.setState({
       value: '',
-      currency: '',
-      method: '',
-      tag: '',
+      currency: 'USD',
+      method: 'Dinheiro',
+      tag: Alimentacao,
       description: '',
     });
   }
