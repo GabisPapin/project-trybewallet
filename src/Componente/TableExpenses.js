@@ -44,6 +44,7 @@ class Table extends React.Component {
                 </td>
                 <td>Real</td>
                 <td>
+                  <button type="button" id={ object.id }>Editar</button>
                   <button
                     data-testid="delete-btn"
                     type="reset"
@@ -52,7 +53,6 @@ class Table extends React.Component {
                   >
                     Excluir
                   </button>
-                  <button type="button" id={ object.id }>Editar</button>
                 </td>
               </tr>
             ))}
