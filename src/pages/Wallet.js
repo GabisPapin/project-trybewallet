@@ -5,7 +5,6 @@ import PropTypes from 'prop-types';
 import Header from '../Componente/Header';
 import { fecthAPI } from '../actions';
 import ExpensesForm from '../Componente/ExpensesForm';
-import Table from '../Componente/TableExpenses';
 
 class Wallet extends React.Component {
   componentDidMount() {
@@ -18,7 +17,6 @@ class Wallet extends React.Component {
       <div>
         <Header />
         <ExpensesForm />
-        <Table />
       </div>
     );
   }
