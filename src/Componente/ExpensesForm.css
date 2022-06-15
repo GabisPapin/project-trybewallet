@@ -1,10 +1,37 @@
 .expenses-form-container {
-  background-color: blue;
+  background-color: rgba(0, 0, 0, 0.63);
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  margin-top: -5%;
   width: 100%;
 }
 
-label {
+.label-value {
   color: aliceblue;
+  margin-left: 1%;
+}
+
+.value-input {
+  margin-left: 1%;
+}
+
+.currency-input {
+  margin-left: 1%;
+}
+
+.method-input {
+  margin-left: 1%;
+}
+
+.tag-input {
+  margin-left: 1%;
+}
+
+.description-input {
+  margin-left: 1%;
+}
+
+.button-add-edit {
+  margin-left: 1%;
 }

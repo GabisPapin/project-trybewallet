@@ -1,9 +1,48 @@
 .header-container {
   align-content: space-around;
-  background-color: blue;
+  background-color: rgba(0, 0, 0, 0.63);
   display: flex;
   flex-flow: row wrap;
   justify-content: right;
   margin-bottom: 10%;
   width: 100%;
+}
+
+header {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.label-email {
+  align-self: flex-start;
+  color: aliceblue;
+  display: flex;
+  margin-right: 80%;
+  margin-top: 5%;
+}
+
+.email {
+  color: aliceblue;
+  display: flex;
+  margin-left: 5%;
+  margin-top: 0;
+}
+
+.container-total-expenses {
+  align-self: center;
+  color: aliceblue;
+  display: flex;
+}
+
+.total-field {
+  color: aliceblue;
+  display: flex;
+  margin-top: 0;
+}
+
+.header-currency-field-container {
+  color: aliceblue;
+  display: flex;
+  margin-left: 2%;
+  margin-top: -4%;
 }
