@@ -2,16 +2,16 @@ import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import Login from './pages/Login';
 import Wallet from './pages/Wallet';
+import './App.css';
 
 function App() {
   return (
-    <>
-      <h3>Hello, TrybeWallet!</h3>
+    <div>
       <Switch>
         <Route exact path="/" component={ Login } />
         <Route path="/carteira" component={ Wallet } />
       </Switch>
-    </>
+    </div>
   );
 }
 

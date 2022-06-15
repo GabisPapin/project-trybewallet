@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { actionDelete, actionEdit } from '../actions';
+import './TableExpenses.css';
 
 class Table extends React.Component {
   constructor() {
@@ -32,7 +33,7 @@ class Table extends React.Component {
     const { expenses } = this.props;
     const { value, currency, method, tag, description, isValid } = this.state;
     return (
-      <div>
+      <div className="table-container">
         <table>
           <thead>
             <tr>

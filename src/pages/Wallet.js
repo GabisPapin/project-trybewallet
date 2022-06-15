@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 import Header from '../Componente/Header';
 import { fecthAPI } from '../actions';
 import ExpensesForm from '../Componente/ExpensesForm';
+import './Wallet.css';
 
 class Wallet extends React.Component {
   componentDidMount() {
@@ -14,7 +15,7 @@ class Wallet extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="wallet">
         <Header />
         <ExpensesForm />
       </div>

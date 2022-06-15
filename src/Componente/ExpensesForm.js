@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { actionExpense, updateInfos } from '../actions';
 import Table from './TableExpenses';
+import './ExpensesForm.css';
 
 const Alimentacao = 'Alimentação';
 
@@ -78,8 +79,8 @@ class ExpensesForm extends React.Component {
     const { currencies, buttonExpenses } = this.props;
     const { value, currency, method, tag, description } = this.state;
     return (
-      <div>
-        <form>
+      <div className="expenses-form-container">
+        <form className="expenses-form">
           <label htmlFor="value">
             Valor:
             <input

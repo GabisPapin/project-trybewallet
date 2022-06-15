@@ -1,0 +1,9 @@
+.header-container {
+  align-content: space-around;
+  background-color: blue;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: right;
+  margin-bottom: 10%;
+  width: 100%;
+}

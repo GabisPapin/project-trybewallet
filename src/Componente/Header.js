@@ -2,6 +2,7 @@ import React from 'react';
 
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import './Header.css';
 
 class Header extends React.Component {
   render() {
@@ -10,7 +11,7 @@ class Header extends React.Component {
       (object) => object.exchangeRates[object.currency].ask * object.value,
     ).reduce((prev, acc) => Number(prev) + Number(acc), 0).toFixed(2);
     return (
-      <div>
+      <div className="header-container">
         <header>
           <label htmlFor="email">
             Email:
