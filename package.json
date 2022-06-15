@@ -1,7 +1,7 @@
 {
   "name": "sd-0x-project-trybewallet",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "homepage": "https://gabispapin.github.io/project-trybewallet/",
   "engines": {
     "node": "16"
