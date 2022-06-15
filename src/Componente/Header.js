@@ -6,7 +6,7 @@ import './Header.css';
 
 class Header extends React.Component {
   render() {
-    const { expenses } = this.props;
+    const { email, expenses } = this.props;
     const conversion = expenses.length === 0 ? 0 : expenses.map(
       (object) => object.exchangeRates[object.currency].ask * object.value,
     ).reduce((prev, acc) => Number(prev) + Number(acc), 0).toFixed(2);
@@ -16,8 +16,7 @@ class Header extends React.Component {
           <label className="label-email" htmlFor="email">
             Email:
             <p className="email" id="email" data-testid="email-field">
-              {/* {email} */}
-              gabrielapapin20@gmail.com
+              {email}
             </p>
           </label>
           <div className="container-total-expenses">

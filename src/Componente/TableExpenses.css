@@ -1,3 +1,18 @@
-.table-container {
-  background-color: blue;
+table {
+  background-color: rgba(0, 0, 0, 0.719);
+  border: 1px groove rgb(142, 219, 41);
+  border-spacing: 0;
+  color: aliceblue;
+  margin: 20px 15px;
+}
+
+th {
+  border: 1px rgb(142, 219, 41);
+  border-style: groove;
+  padding: 10px;
+}
+
+td {
+  border: 1px rgb(142, 219, 41);
+  border-style: groove;
 }
